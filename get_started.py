@@ -22,10 +22,13 @@ api_token = os.getenv("OWM_TOKEN")
 # Specify a city for the forecast information
 city = 'Helsinki'
 
+#fetches the celsius
+parameter = 'metric'
+
 # API call to OpenWeather 
 # Retrieves information for the specified CITY
 # format() uses {} as placeholders for the variables (e.g. city & api_token) you specify in the parentheses
-city_url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'.format(city, api_token)
+city_url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units={}&appid={}'.format(city, parameter, api_token)
 
 # urlopen() opens a URL
 # the response is an HTTP response
